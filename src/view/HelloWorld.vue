@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-09-21 10:47:33
- * @LastEditTime: 2020-09-28 10:44:02
+ * @LastEditTime: 2020-09-28 13:40:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /viteDemo/src/components/HelloWorld.vue
@@ -32,6 +32,7 @@ export default {
       let _this = this
       let constraints = {audio: false, video: true}; 
       let video = document.getElementById('stream')
+      console.log(video.pause);
       navigator.getUserMedia(constraints, function(stream) {
           video.srcObject = stream;
           window.stream = stream;
