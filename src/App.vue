@@ -20,14 +20,13 @@ export default {
 </script>
 
 <style>
+    @import url(./less/reset.less);
   *{
     box-sizing: border-box;
   }
-  body{
-    margin: 0;
-    padding: 0;
-  }
   #app{
     width: 100%;
+    height: 100%;
+    margin: 0 auto;
   }
 </style>

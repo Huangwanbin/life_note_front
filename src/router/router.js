@@ -13,11 +13,15 @@ const router = createRouter({
     routes: [
         { 
             path: '/',
-            component: () => import('../view/HelloWorld.vue')
+            component: () => import('../view/home.vue')
         },
         {
             path:'/user',
             component:()=>import('../view/user.vue')
+        },
+        {
+            path:'/video',
+            component:()=>import('../view/HelloWorld.vue')
         }
     ]
 })
