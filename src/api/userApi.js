@@ -1,10 +1,10 @@
-import http from '@/utils/request.js'
+import http from '../utils/request.js'
 let api = {
-    login(url,params){
-        return http.post(url,prams)
+    login(params){
+        return http.post(`http://127.0.0.1:7001/login`,params)
     },
-    getUserInfo(url,query){
-        return http.get(url,query)
+    getUserInfo(query){
+        return http.get(`http://127.0.0.1:7001/home`,query)
     }
 }
 export default api
