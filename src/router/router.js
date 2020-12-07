@@ -13,15 +13,25 @@ const router = createRouter({
     routes: [
         { 
             path: '/',
-            component: () => import('../view/home.vue')
+            component: () => import('../view/home.vue'),
+            meta:{
+                title: '首页'
+            }
         },
         {
-            path:'/user',
-            component:()=>import('../view/user.vue')
+            path: '/user',
+            component:()=>import('../view/user.vue'),
+            meta:{
+                title: '个人中心'
+            }
         },
         {
-            path:'/video',
-            component:()=>import('../view/HelloWorld.vue')
+            name: 'login',
+            path: '/login',
+            component:()=>import('../view/login.vue'),
+            meta:{
+                title: '登录'
+            }
         }
     ]
 })
