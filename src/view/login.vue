@@ -7,11 +7,12 @@
  * @FilePath: /viteDemo/src/components/HelloWorld.vue
 -->
 <template>
-  <div class="login">
-    
+  <div class="login" >
+    <!-- 背景色块 -->
+    <div class="login-colorLump">111</div>
     <van-field v-model="phone" type="number" label="手机号" />
     <van-field v-model="password" type="password" label="密码" />
-    <van-button @click="login" type="primary" size="small">登录</van-button>
+    <van-button @click="login" type="primary" size="small" class="login-button">登录</van-button>
   </div>
 </template>
 
@@ -52,8 +53,15 @@ export default {
 
 <style lang="less">
   .login{
+    overflow: hidden;
     width: 100%;
-     
+    .login-colorLump{
+      height: 200px;
+      background-color: pink;
+    }
+     .login-button{
+      margin-top: 20px;
+     }
   }
 
 </style>
