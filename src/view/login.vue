@@ -11,7 +11,7 @@
     
     <van-field v-model="phone" type="number" label="手机号" />
     <van-field v-model="password" type="password" label="密码" />
-    <van-button @click="login" type="primary">登录</van-button>
+    <van-button @click="login" type="primary" size="small">登录</van-button>
   </div>
 </template>
 
