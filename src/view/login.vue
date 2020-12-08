@@ -18,7 +18,20 @@
     <van-field v-model="phone" type="number" left-icon="wap-home-o" clearable placeholder="手机号"/>
     <van-field v-model="password" type="password"  left-icon="lock"  placeholder="密码"/>
     <van-button @click="login" type="primary" size="normal" class="login-button" block style="margin-top:25px">登录</van-button>
-    <van-button @click="login" type="primary" size="normal" class="login-button" block style="backgroundColor:#ccc">注册</van-button>
+  </div>
+  <div class="login-bottom">
+    <!-- 更多（注册，忘记密码） -->
+    <div style="position: relative;margin-top:15px;padding-bottom:45px;">
+      <span @click="register" style="font-size:14px;color:rgb(208, 193, 198);position: absolute;left:0;">注册</span>
+      <span @click="forget" style="font-size:14px;color:rgb(208, 193, 198);position: absolute;right:0;">忘记密码</span>
+    </div>
+    <!-- 第三方快捷登录 -->
+    <div>
+      <img src="../assets/img/weChat.jpg" alt="" >
+      <img src="../assets/img/QQ.gif" alt="" >
+      <img src="../assets/img/weChat.jpg" alt="" >
+    </div>
+  </div>
   </div>
 </template>
 
@@ -38,6 +51,7 @@ export default {
     }
   },
   methods:{
+    // 登录
     login(){
       let {phone,password} = this
       api.login({phone,password}).then(res=>{
@@ -50,6 +64,13 @@ export default {
         }
         this.$toast(msg)
       })
+    },
+    // 注册
+    register(){
+      alert('注册')
+    },
+    forget(){
+      alert('改密码')
     }
   },
   mounted(){
@@ -59,9 +80,9 @@ export default {
 
 <style lang="less">
   .login{
-    overflow: hidden;
     width: 100%;
     height: 100%;
+    // background-color: rgb(236, 233, 233);
     .login-colorLump{
       height: 200px;
       background-color:rgb(208, 193, 198);
@@ -75,13 +96,21 @@ export default {
     }
     .login-form{
       margin-top: 70px;
-      padding: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
       .login-button{
         margin-top: 10px;
-        border: none;
       }
     }
-     
+    .login-bottom{
+      padding-left: 30px;
+      padding-right: 30px;
+      img{
+      width: 50px;
+      height: 50px;
+      margin-left: 40px;
+      }
+    }
   }
 
 </style>
