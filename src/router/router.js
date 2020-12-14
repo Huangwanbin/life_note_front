@@ -12,6 +12,7 @@ const router = createRouter({
     history,
     routes: [
         { 
+            name: 'home',
             path: '/',
             component: () => import('../view/home.vue'),
             meta:{
@@ -19,6 +20,7 @@ const router = createRouter({
             }
         },
         {
+            name: 'user',
             path: '/user',
             component:()=>import('../view/user.vue'),
             meta:{

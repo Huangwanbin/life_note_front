@@ -59,6 +59,12 @@ export default {
         let msg = ''
         if (res.code==200) {
             msg = '登录成功'
+            this.$router.push({
+              name:'user',
+              query:{
+                user_id: res.data.user_id || 0
+              }
+            })
         }else {
            msg = res.msg || '登录失败!'
         }
