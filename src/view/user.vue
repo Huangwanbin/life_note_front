@@ -22,7 +22,9 @@ export default {
         console.log(this.$route.query.user_id);
         const { user_id } = this.$route.query
         api.getUserInfo({ user_id }).then(res=>{
-            console.log(res);
+            if (res.code !== 200 ) {
+                this.$router.push('/login')
+            }
             this.userInfo = res.data || {}
         })
     }

@@ -12,8 +12,13 @@ const router = createRouter({
     history,
     routes: [
         { 
-            name: 'home',
+            name: 'index',
             path: '/',
+            redirect:'/user'
+        },
+        { 
+            name: 'home',
+            path: '/home',
             component: () => import('../view/home.vue'),
             meta:{
                 title: '首页'
